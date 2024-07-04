@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65f47e38b49e0537d8e5cc34"
+  },
+  "title": "sss",
+  "text": "sss",
+  "price": "333",
+  "img": "/uploads/1989538fedeb2b1c44fece5a1395a877",
+  "nameCategory": "florale",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f47f91f8e6c7a0d009f131"
+  },
+  "title": "jjj",
+  "text": "jjj",
+  "price": "88",
+  "img": "/uploads/e37cdb15e315c93c474b4490fe216ec4",
+  "nameCategory": "florale",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f49797e061269c934086ea"
+  },
+  "title": "kosd",
+  "text": "ggdvpewhfi",
+  "price": "111111111111111111111",
+  "img": "/uploads/00be8c7daa54528daf2c241f3e14b501",
+  "nameCategory": "florale",
+  "__v": 0
+}]

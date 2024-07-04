@@ -1,0 +1,103 @@
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.breadcrumb {
+  background: linear-gradient(270deg, #1e90ff, #87ceeb, #1e90ff);
+  background-size: 600% 600%;
+  animation: gradient-animation 6s ease infinite;
+  padding: 1rem 20px;
+  color: black;
+}
+
+.breadcrumb div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 6px;
+  padding-bottom: 3.8rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb div p,
+.breadcrumb div a {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.containerTitle {
+  display: flex;
+  justify-content: center;
+  border-radius: 30%;
+  width: max-content;
+  height: auto;
+  padding: 1rem;
+  text-decoration: overline #c10038;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.breadcrumb svg {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.title {
+  text-align: center !important;
+  font-size: 3rem !important;
+  font-family: ui-monospace;
+  color: #000000 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.link {
+  color: #c10038 !important;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.4rem !important;
+}
+
+.link:hover {
+  font-size: 1.4rem !important;
+}
+
+@media (min-width: 768px) {
+  .breadcrumb {
+    padding: 0 60px;
+    padding-top: 3rem;
+  }
+
+  .breadcrumb div {
+    flex-direction: row-reverse;
+    gap: 6px;
+    padding-bottom: 3.8rem;
+  }
+
+  .title {
+    font-size: 4rem !important;
+    padding-top: 3.9rem;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+
+  .link:hover {
+    font-size: 1.5rem;
+  }
+}

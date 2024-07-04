@@ -1,0 +1,60 @@
+.layout {
+  background: white;
+  width: 100%;
+  direction: rtl;
+  color: black;
+}
+
+.section {
+  display: flex;
+}
+
+.contents {
+  width: 100%;
+  display: block;
+}
+
+.sidebarToggle {
+  display: none;
+  background-color: #feff00;
+  color: #000000;
+  border: none;
+  height: 4rem;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  cursor: pointer;
+  position: fixed;
+  top: 6rem;
+  right: 10px;
+  z-index: 1000;
+  line-height: 1.3rem;
+  border-radius: 5px;
+  text-align: center !important;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 770px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .show {
+    display: block;
+    width: 100%;
+    height: 0vh;
+  }
+
+  .contents {
+    box-sizing: border-box;
+  }
+  .content {
+  }
+  .sidebarToggle {
+    display: block;
+  }
+}

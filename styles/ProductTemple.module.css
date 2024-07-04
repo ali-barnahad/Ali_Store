@@ -1,0 +1,33 @@
+.myContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  --bs-gutter-x: 0 !important;
+}
+.myRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0.1rem;
+}
+
+.myCol {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+}

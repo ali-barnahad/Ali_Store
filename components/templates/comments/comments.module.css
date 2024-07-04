@@ -1,0 +1,29 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 2rem;
+}
+.comments span {
+  margin-right: 0.3rem;
+}
+.user_comments {
+  width: 100%;
+}
+
+.form_bg {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .comments {
+    display: flex;
+    flex-direction: row;
+  }
+  .user_comments {
+    width: 50%;
+  }
+
+  .form_bg {
+    width: 50%;
+  }
+}
