@@ -42,6 +42,7 @@
   font-size: 1.22rem !important;
   line-height: inherit;
   color: #000000de;
+  width: max-content;
 }
 
 .priceContainer {

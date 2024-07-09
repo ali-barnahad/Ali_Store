@@ -13,7 +13,7 @@ const ProductDetails = dynamic(
   }
 );
 
-const Product = React.memo(({ product, comments }) => (
+const Product = React.memo(({ product, comments, mostVisitedProducts }) => (
   <>
     <Head>
       <title>{`${product.title}  - Ali Store`}</title>
@@ -68,7 +68,11 @@ const Product = React.memo(({ product, comments }) => (
         `}
       </script>
     </Head>
-    <ProductDetails product={product} comments={comments} />
+    <ProductDetails
+      product={product}
+      comments={comments}
+      mostVisitedProducts={mostVisitedProducts}
+    />
   </>
 ));
 
@@ -104,11 +108,17 @@ export async function getStaticProps({ params }) {
 
     const comments =
       (await CommentModel.find({ productID: params.id }).lean()) || [];
+    const mostVisitedProducts = await mobileModel
+      .find({})
+      .sort({ view: -1 })
+      .limit(10)
+      .lean();
 
     return {
       props: {
         product: JSON.parse(JSON.stringify(product)),
         comments: JSON.parse(JSON.stringify(comments)),
+        mostVisitedProducts: JSON.parse(JSON.stringify(mostVisitedProducts)),
       },
       revalidate: 60,
     };

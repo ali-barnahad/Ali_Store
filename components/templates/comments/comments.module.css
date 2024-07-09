@@ -10,7 +10,15 @@
 .user_comments {
   width: 100%;
 }
-
+.headerComments {
+  width: max-content !important;
+  color: #1c1c1b !important;
+  margin: 6rem auto 3rem auto !important;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline #c10038 !important;
+  text-underline-offset: 1rem !important;
+}
 .form_bg {
   width: 100%;
 }

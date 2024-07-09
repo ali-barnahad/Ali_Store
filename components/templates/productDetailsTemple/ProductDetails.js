@@ -7,8 +7,9 @@ import styles from "@/styles/ProductDetails.module.css";
 import Comments from "../comments/comments";
 import useTranslation from "@/hooks/useTranslation";
 import { FaEuroSign } from "react-icons/fa";
+import SimilarProducts from "@/components/modules/similarProducts/SimilarProducts";
 
-function ProductDetails({ product, comments }) {
+function ProductDetails({ product, comments, mostVisitedProducts }) {
   const { t } = useTranslation("common");
   const [isFixed, setFixed] = useState(true);
   const [name, setName] = useState("");
@@ -112,6 +113,14 @@ function ProductDetails({ product, comments }) {
           data={product}
         />
       </Row>
+      <SimilarProducts
+        products={mostVisitedProducts}
+        view={2.5}
+        viewXs={3.5}
+        viewSm={4.5}
+        viewLg={5.5}
+        viewXl={6.5}
+      />
       <Comments
         productID={product._id}
         productType={product.nameCategory}

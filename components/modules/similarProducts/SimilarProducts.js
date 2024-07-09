@@ -1,23 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import styles from "@/styles/HomePageCategoryTemple.module.css";
+import styles from "@/styles/SimilarProducts.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import HomePageCategorySection from "@/components/modules/homePageCategorySection/HomePageCategorySection";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, A11y } from "swiper/modules";
 
-function HomePageCategoryTemple({
-  products,
-  view,
-  viewXs,
-  viewSm,
-  viewLg,
-  viewXl,
-}) {
+function SimilarProducts({ products, view, viewXs, viewSm, viewLg, viewXl }) {
   const { t } = useTranslation("common");
 
   if (!products || !products.length) {
@@ -28,16 +20,9 @@ function HomePageCategoryTemple({
     );
   }
 
-  // Extract the nameCategory from the first product
-  const firstProductNameCategory = products[0].nameCategory;
-
   return (
-    <>
-      <Link href={`/${firstProductNameCategory}`} passHref>
-        <h1 className={styles.headerCategory}>
-          {t(`${firstProductNameCategory}`)}
-        </h1>
-      </Link>
+    <div div className={styles.myContainer}>
+      <h1 className={styles.headerCategory}> {t("similarProducts")}</h1>
       <div className={styles.swiperContainer}>
         <Swiper
           modules={[Navigation, A11y]}
@@ -68,8 +53,8 @@ function HomePageCategoryTemple({
           ))}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 }
 
-export default HomePageCategoryTemple;
+export default SimilarProducts;

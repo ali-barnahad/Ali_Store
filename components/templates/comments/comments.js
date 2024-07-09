@@ -9,9 +9,9 @@ const Comments = ({ productID, comments = [], productType, name, email }) => {
 
   return (
     <div>
-      <p>
+      <h1 className={styles.headerComments}>
         {t("comments")} ({comments.length}) :
-      </p>
+      </h1>
       <hr />
       <main className={styles.comments}>
         <div className={styles.user_comments}>

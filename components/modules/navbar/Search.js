@@ -25,7 +25,7 @@ const Search = () => {
   const handleInputChange = (e) => {
     const value = e.target.value;
     setQuery(value);
-    if (value.length > 2) {
+    if (value.length > 1) {
       fetchResults(value);
     } else {
       setResults([]);
@@ -51,7 +51,7 @@ const Search = () => {
           <MdSearch className={styles.searchIcon} />
         </InputGroup.Text>
       </InputGroup>
-      {results.length > 0 && (
+      {results && (
         <ListGroup className={styles.suggestionsList}>
           {Object.keys(results).map((type) =>
             results[type].map((product) => (

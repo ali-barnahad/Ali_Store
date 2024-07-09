@@ -14,11 +14,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  max-height: 300px;
+  max-height: 400px;
   overflow-y: auto;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 20px;
+  width: 35rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .searchInput {
@@ -35,7 +35,8 @@
   padding: 10px;
   cursor: pointer;
   transition: background 0.3s;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: #3d3d3d;
 }
 
 .suggestionItem:hover {

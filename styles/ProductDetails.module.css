@@ -1,7 +1,6 @@
 /* Container styles */
 .myContainer {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: max-content;
   padding: 20px;
   display: flex;
   flex-direction: column;
