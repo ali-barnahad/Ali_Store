@@ -28,16 +28,18 @@ function CardsProduct({ product }) {
 
   return (
     <Card className={styles.card}>
-      <Image
-        src={img}
-        width={300}
-        height={200}
-        alt={`Picture of ${title}`}
-        className={styles.img}
-        loading="lazy" // Explicitly setting lazy loading
-        onClick={handleClick(router, isLoading, setLoading, t, product)}
-        style={{ cursor: "pointer" }}
-      />
+      <div className={styles.imgContainer}>
+        <Image
+          src={img}
+          width={300}
+          height={200}
+          alt={`Picture of ${title}`}
+          className={styles.img}
+          loading="lazy" // Explicitly setting lazy loading
+          onClick={handleClick(router, isLoading, setLoading, t, product)}
+          style={{ cursor: "pointer" }}
+        />
+      </div>
       <div className={styles.cardTexts}>
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.title}>{title}</Card.Title>

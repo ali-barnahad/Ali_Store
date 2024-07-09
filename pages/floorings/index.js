@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import productsModel from "@/models/flooringModel";
 import connectToDB from "@/utils/db";
-
 import dynamic from "next/dynamic";
+import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/Sort.module.css";
 const Breadcrumbs = dynamic(
   () => import("@/components/modules/breadcrumbs/Breadcrumbs"),
   { ssr: false }
@@ -14,19 +15,45 @@ const ProductTemple = dynamic(
 );
 
 function Floorings({ products }) {
+  const [sortedProducts, setSortedProducts] = useState(products);
+  const [sortCriteria, setSortCriteria] = useState("");
+  const { t } = useTranslation();
+
+  const handleSortChange = (e) => {
+    const value = e.target.value;
+    setSortCriteria(value);
+
+    let sorted = [...products];
+    if (value === "price-asc") {
+      sorted.sort((a, b) => a.price - b.price);
+    } else if (value === "price-desc") {
+      sorted.sort((a, b) => b.price - a.price);
+    } else if (value === "name-asc") {
+      sorted.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (value === "name-desc") {
+      sorted.sort((a, b) => b.title.localeCompare(a.title));
+    } else if (value === "visits-asc") {
+      sorted.sort((a, b) => a.view - b.view);
+    } else if (value === "visits-desc") {
+      sorted.sort((a, b) => b.view - a.view);
+    } else if (value === "offer-asc") {
+      sorted.sort((a, b) => a.offer - b.offer);
+    } else if (value === "offer-desc") {
+      sorted.sort((a, b) => b.offer - a.offer);
+    }
+    setSortedProducts(sorted);
+  };
+
   return (
     <>
       <Head>
-        <title>Floorings - Ali Store</title>
-        <meta
-          name="description"
-          content="Browse our extensive collection of floorings. Find the latest models and best deals on Ali Store."
-        />
+        <title>{t("flooringsPageTitle")}</title>
+        <meta name="description" content={t("flooringsPageDescription")} />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Floorings - Ali Store" />
+        <meta property="og:title" content={t("flooringsPageTitle")} />
         <meta
           property="og:description"
-          content="Browse our extensive collection of floorings. Find the latest models and best deals on Ali Store."
+          content={t("flooringsPageDescription")}
         />
         <meta property="og:type" content="website" />
         <meta
@@ -44,8 +71,8 @@ function Floorings({ products }) {
               "@context": "https://schema.org",
               "@type": "ItemList",
               "url": "https://sticker-next.liara.run/floorings",
-              "name": "Floorings - Ali Store",
-              "description": "Browse our extensive collection of floorings. Find the latest models and best deals on Ali Store.",
+              "name": "${t("flooringsPageTitle")}",
+              "description": "${t("flooringsPageDescription")}",
               "itemListElement": ${JSON.stringify(
                 products.map((product, index) => ({
                   "@type": "ListItem",
@@ -68,7 +95,28 @@ function Floorings({ products }) {
         </script>
       </Head>
       <Breadcrumbs route="floorings" />
-      <ProductTemple productDetail={products} />
+      <div className={styles.sort}>
+        <label className={styles.sortLabel} htmlFor="sort">
+          {t("sortBy")}:
+        </label>
+        <select
+          id="sort"
+          value={sortCriteria}
+          className={styles.sortSelect}
+          onChange={handleSortChange}
+        >
+          <option value="">{t("select")}</option>
+          <option value="price-asc">{t("priceLowToHigh")}</option>
+          <option value="price-desc">{t("priceHighToLow")}</option>
+          <option value="name-asc">{t("nameAToZ")}</option>
+          <option value="name-desc">{t("nameZToA")}</option>
+          <option value="visits-asc">{t("visitsLowToHigh")}</option>
+          <option value="visits-desc">{t("visitsHighToLow")}</option>
+          <option value="offer-asc">{t("offerLowToHigh")}</option>
+          <option value="offer-desc">{t("offerHighToLow")}</option>
+        </select>
+      </div>
+      <ProductTemple productDetail={sortedProducts} />
     </>
   );
 }

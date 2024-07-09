@@ -1,3 +1,4 @@
+// hooks/useTranslation.js
 import { useContext } from "react";
 import { TranslationContext } from "@/context/TranslationContext";
 

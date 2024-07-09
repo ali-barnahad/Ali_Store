@@ -1,3 +1,4 @@
+// components/templates/productTemple/ProductTemple.js
 import CardsProduct from "@/components/modules/cardsProduct/CardsProduct";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";

@@ -16,16 +16,16 @@ const ProductDetails = dynamic(
 const Product = React.memo(({ product, comments }) => (
   <>
     <Head>
-      <title>{`${product.name} - Ali Store`}</title>
+      <title>{`${product.title}  - Ali Store`}</title>
       <meta
         name="description"
-        content={`Buy ${product.name} at Ali Store. Features: ${product.features}.`}
+        content={`Buy${product.title} at Ali Store. Features: ${product.features}.`}
       />
       <meta name="robots" content="index, follow" />
-      <meta property="og:title" content={`${product.name} - Ali Store`} />
+      <meta property="og:title" content={`${product.title}  - Ali Store`} />
       <meta
         property="og:description"
-        content={`Buy ${product.name} at Ali Store. Features: ${product.features}.`}
+        content={`Buy${product.title} at Ali Store. Features: ${product.features}.`}
       />
       <meta property="og:type" content="product" />
       <meta
@@ -42,7 +42,7 @@ const Product = React.memo(({ product, comments }) => (
           {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "${product.name}",
+            "name": "${product.title} ",
             "image": "${product.imageURL}",
             "description": "${product.description}",
             "sku": "${product.sku}",

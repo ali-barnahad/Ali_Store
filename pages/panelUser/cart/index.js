@@ -84,7 +84,7 @@ export async function getServerSideProps(context) {
     console.error("Token verification error:", error);
     return {
       redirect: {
-        destination: "/login-register", // Redirect to registerOrLogin if token is invalid
+        destination: "/login-register",
         permanent: false,
       },
     };

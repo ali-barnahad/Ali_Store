@@ -35,7 +35,9 @@ function HomePageCategoryTemple({
   return (
     <>
       <Link href={`/${firstProductNameCategory}`} passHref>
-        <h1 className={styles.headerCategory}>{firstProductNameCategory}</h1>
+        <h1 className={styles.headerCategory}>
+          {t(`${firstProductNameCategory}`)}
+        </h1>
       </Link>
       <div className={styles.swiperContainer}>
         <Swiper

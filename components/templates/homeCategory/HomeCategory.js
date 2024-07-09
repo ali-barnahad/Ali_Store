@@ -41,7 +41,7 @@ const HomeCategory = React.memo(({ items }) => {
               />
               <ButtonLoadHome
                 myload={t("processing")}
-                nload={item.title}
+                nload={t(`${item.title}`)}
                 data={item}
               />
             </div>

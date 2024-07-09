@@ -11,7 +11,7 @@ import { FaEuroSign } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { truncateTitle } from "@/utils/truncateTitle";
 import QuickViewModal from "../quickViewModal/QuickViewModal";
-
+import DefaultImage from "../../../public/uploads/default.jpg";
 function HomePageCategorySection({ product }) {
   const { t } = useTranslation("common");
   const { price, offer, img, title } = product;
@@ -19,6 +19,7 @@ function HomePageCategorySection({ product }) {
   const [isLoading, setLoading] = useState(false);
   const [showQuickView, setShowQuickView] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+
   const { discountedPrice, formattedPrice } = useMemo(() => {
     const priceCalculation = Number(price);
     const discountedPriceCalculation = ((100 - offer) * priceCalculation) / 100;
@@ -39,17 +40,18 @@ function HomePageCategorySection({ product }) {
     setShowQuickView(false);
     setSelectedItem(null);
   };
+
   return (
     <Card className={styles.card}>
       <Image
-        src={img}
+        src={img || DefaultImage}
         width={300}
         height={300}
         alt={`Picture of ${title}`}
         className={styles.img}
         onClick={handleClick(router, isLoading, setLoading, t, product)}
         style={{ cursor: "pointer" }}
-        loading="lazy" // Explicitly setting lazy loading
+        loading="lazy"
       />
       <div className={styles.cardTexts}>
         <Card.Body className={styles.cardBody}>
@@ -95,7 +97,6 @@ function HomePageCategorySection({ product }) {
             />
           </span>
         </div>
-
         <AddToWishList myload={t("adding")} nload="" data={product} />
       </div>
       <QuickViewModal

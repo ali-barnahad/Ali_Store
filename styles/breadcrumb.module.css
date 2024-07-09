@@ -11,7 +11,7 @@
 }
 
 .breadcrumb {
-  background: linear-gradient(270deg, #1e90ff, #87ceeb, #1e90ff);
+  background: linear-gradient(270deg, #d1d1d1, #49a4ff, #d1d1d1);
   background-size: 600% 600%;
   animation: gradient-animation 6s ease infinite;
   padding: 1rem 20px;

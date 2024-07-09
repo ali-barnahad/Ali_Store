@@ -1,3 +1,4 @@
+// pages/index.js
 import React from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -104,11 +105,11 @@ function Home({
         <section>
           <HomePageCategoryTemple
             products={watches}
-            view={2}
-            viewXs={3.2}
-            viewSm={4.2}
-            viewLg={5.2}
-            viewXl={6.2}
+            view={1.8}
+            viewXs={2.5}
+            viewSm={2.8}
+            viewLg={3.3}
+            viewXl={4.3}
           />
         </section>
         <section>
@@ -135,10 +136,10 @@ function Home({
           <HomePageCategoryTemple
             products={floorings}
             view={1.2}
-            viewXs={2.2}
-            viewSm={3.2}
-            viewLg={3.2}
-            viewXl={3.2}
+            viewXs={3.6}
+            viewSm={4.6}
+            viewLg={5.6}
+            viewXl={6.6}
           />
         </section>
         <section>

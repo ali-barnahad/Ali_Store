@@ -36,7 +36,7 @@ function ProductDetails({ product, comments }) {
         const endTop = endElement.getBoundingClientRect().top;
         const imageHeight = imageElement.getBoundingClientRect().height;
 
-        if (endTop <= imageHeight + 20) {
+        if (endTop <= imageHeight + 90) {
           setImageFixed(false);
         } else {
           setImageFixed(true);
@@ -64,7 +64,7 @@ function ProductDetails({ product, comments }) {
   return (
     <Container className={styles.myContainer}>
       <Row className={styles.myRow} ref={rowRef}>
-        <Col xs={12} md={6} className={`${styles.myCol}`}>
+        <Col xs={12} lg={6} className={`${styles.myCol}`}>
           <Image
             src={product.img}
             width={400}
@@ -78,7 +78,7 @@ function ProductDetails({ product, comments }) {
             ref={imageRef}
           />
         </Col>
-        <Col xs={12} md={6} className={styles.myCol}>
+        <Col xs={12} lg={6} className={styles.myCol}>
           <p className={styles.title}>{product.title}</p>
           <p className={styles.text}>{product.text}</p>
         </Col>

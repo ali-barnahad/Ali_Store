@@ -103,7 +103,6 @@ const CartComponent = ({ initialItems }) => {
                 alt={item.title}
                 width={100}
                 height={100}
-                layout="fixed"
                 className={styles.image}
                 loading="lazy" // Explicitly setting lazy loading
               />

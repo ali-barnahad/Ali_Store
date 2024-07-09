@@ -1,0 +1,74 @@
+/* Search.module.css */
+
+.searchContainer {
+  position: relative;
+  margin-left: 1.5rem;
+  margin-right: 1rem;
+  width: auto;
+  text-align-last: center;
+}
+
+.suggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.searchInput {
+  background-color: transparent !important;
+  border: transparent !important;
+  margin-right: -0.5rem !important;
+}
+.searchIcon {
+  color: #2c2c2c;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.suggestionItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.suggestionItem:hover {
+  background: #f7f7f7;
+}
+
+.suggestionItem:active {
+  background: #e9ecef;
+}
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.productTitle {
+  align-content: center;
+}
+@media (min-width: 576px) {
+  .searchContainer {
+    margin-left: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .searchContainer {
+    margin-left: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .searchContainer {
+    margin-left: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .searchContainer {
+    margin-left: 6rem;
+  }
+}

@@ -27,8 +27,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/flooring.webp"
             alt="Slide 1"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
@@ -36,8 +36,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/mobile.webp"
             alt="Slide 2"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
@@ -48,8 +48,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/personalItem.webp"
             alt="Slide 3"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
@@ -57,8 +57,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/sticker.webp"
             alt="Slide 4"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
@@ -69,8 +69,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/kitchenware.webp"
             alt="Slide 5"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
@@ -78,8 +78,8 @@ const MainHomeTopSlider = () => {
           <Image
             src="/categoryImages/watch.webp"
             alt="Slide 3"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.image}
             loading="lazy" // Explicitly setting lazy loading
           />
         </div>
