@@ -1,0 +1,101 @@
+.container {
+  color: black;
+  text-align: right;
+
+  width: 90%;
+  padding: 15px;
+  margin: 1rem auto;
+  display: block;
+  flex-direction: row;
+}
+
+.container section {
+  display: block;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+
+  color: gray;
+  line-height: 2rem;
+  gap: 10px;
+  padding: 40px 0;
+}
+
+.container section div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+}
+
+.container section div p {
+  font-size: 18px;
+  line-height: 2.3rem;
+}
+
+.container span,
+.main span {
+  font-size: 14px;
+}
+
+.main {
+  display: block;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 2rem 0;
+}
+
+.main p {
+  margin-top: 20px;
+  direction: rtl;
+}
+
+.title {
+  margin: 10px 0 !important;
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 20px;
+}
+.companyName {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+}
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .container section {
+    gap: 50px;
+  }
+
+  .main {
+    gap: 90px;
+  }
+
+  .container section div p {
+    font-size: 20px;
+    line-height: 1.8rem;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container section {
+    gap: 110px;
+    line-height: 2.5rem;
+  }
+
+  .container section div p {
+    font-size: 22px;
+    line-height: 2.5rem;
+  }
+
+  .main div p {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+}

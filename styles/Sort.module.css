@@ -1,0 +1,29 @@
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.sortLabel {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: inherit;
+  margin-right: 0.5rem;
+  color: #191a1b93;
+}
+.sortSelect {
+  font-size: 1.5rem;
+  line-height: inherit;
+  border: 1px solid #191a1b93;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #191a1b93;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+}

@@ -1,0 +1,48 @@
+.buttonLoad {
+  /* Ensures the button does not stretch full width */
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  padding: 10px 20px; /* Provides adequate padding for clickable area */
+  color: #ffe0ae; /* White color text for better readability */
+  font-size: 1.5rem; /* Adjusted for readability across devices */
+  font-weight: bold;
+  background-color: #c10038; /* Deep red color for visual impact */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+  text-align: center !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.buttonLoad:hover,
+.buttonLoad:focus {
+  background-color: #a80032; /* Darker shade on hover/focus for feedback */
+  transform: scale(1.05); /* Slightly enlarge button when hovered/focused */
+  outline: none; /* Removes default focus outline */
+}
+
+.buttonLoad:disabled {
+  background-color: #cccccc; /* Greyed out when disabled */
+  color: #666666;
+  cursor: not-allowed; /* Shows not-allowed cursor on disabled state */
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+  .buttonLoad {
+    font-size: 1.5rem; /* Slightly larger font on larger screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .buttonLoad {
+    font-size: 1.5rem; /* Further adjustment for readability on tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  .buttonLoad {
+    padding: 12px 24px; /* More padding for a larger button */
+  }
+}

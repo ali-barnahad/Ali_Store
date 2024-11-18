@@ -1,0 +1,44 @@
+.comments {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
+  margin-top: 2rem;
+}
+.comments span {
+  margin-right: 0.3rem;
+}
+.user_comments {
+  width: 100%;
+  padding: 0 3rem;
+}
+.headerComments {
+  width: max-content !important;
+  color: #1c1c1b !important;
+  margin: 6rem auto 3rem auto !important;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline #c10038 !important;
+  text-underline-offset: 1rem !important;
+}
+.form_bg {
+  width: 100%;
+}
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .comments {
+    display: flex;
+    flex-direction: row;
+  }
+  .user_comments {
+    width: 50%;
+  }
+
+  .form_bg {
+    width: 50%;
+  }
+}

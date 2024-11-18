@@ -1,0 +1,6 @@
+.buttonLoad {
+  /* Ensures the button does not stretch full width */
+  border: none;
+  padding: 0.3rem !important;
+  border-radius: 0.5rem;
+}

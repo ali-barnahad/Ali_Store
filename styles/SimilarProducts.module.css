@@ -1,0 +1,73 @@
+.myContainerNoProduct {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+.noProduct {
+  font-size: 2rem;
+  border: groove;
+  height: max-content;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.myContainer {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.headerCategory {
+  width: max-content;
+  color: #1c1c1b;
+  margin: 6rem auto 3rem;
+  font-weight: bold;
+  text-decoration: underline #c10038;
+  text-underline-offset: 1rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.swiperContainer {
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important; /* Adjust this color as needed */
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255) !important;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 50px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}

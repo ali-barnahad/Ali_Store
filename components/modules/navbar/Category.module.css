@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+  .category {
+    display: inline-block;
+    width: min-content;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-right: 0.1rem;
+  }
+}
+.category {
+  display: none;
+}

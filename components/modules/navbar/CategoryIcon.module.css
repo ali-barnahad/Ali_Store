@@ -1,0 +1,54 @@
+@keyframes colorChange {
+  0% {
+    fill: #083344;
+  }
+  50% {
+    fill: #4990e2;
+  }
+  100% {
+    fill: #083344;
+  }
+}
+.category {
+  display: none;
+}
+@media (min-width: 360px) {
+  .category {
+    display: inline-block;
+    width: min-content;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-right: 0.1rem;
+  }
+  @media (max-width: 1024px) {
+    .category {
+      display: none;
+    }
+  }
+}
+
+.rect {
+  animation-duration: 5.5s; /* Adjust this duration for slower/faster transitions */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.rect1 {
+  animation-name: colorChange;
+}
+
+.rect2 {
+  animation-name: colorChange;
+  animation-delay: 1s; /* Stagger the animations */
+}
+
+.rect3 {
+  animation-name: colorChange;
+  animation-delay: 2s; /* Further stagger the animations */
+}
+
+.rect4 {
+  animation-name: colorChange;
+  animation-delay: 3s; /* Stagger for the final rectangle */
+}

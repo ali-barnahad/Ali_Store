@@ -1,0 +1,153 @@
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* CardHome.module.css */
+.main {
+  margin: 1rem 0 5rem 0 !important;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust as needed */
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.image {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+}
+.image:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 4rem 0 2rem 0;
+  color: #082f49;
+}
+.buttonLoad {
+  padding: auto;
+  width: max-content;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: #c10038;
+  background: #ffffff;
+  color: #082f49;
+  margin: 0.5rem 0.5rem 0.7rem 0.5rem;
+  border-radius: 40px;
+}
+
+.buttonLoad:hover {
+  background-color: #ffe0ae;
+  color: #000000;
+  cursor: pointer;
+
+  transform: scale(1.1);
+  animation: bounce 0.6s infinite;
+}
+@media (min-width: 576px) {
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .buttonLoad {
+    margin-top: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 4rem 0 2rem 0;
+  }
+}
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .image {
+    width: 210px;
+    height: 210px;
+  }
+
+  .buttonLoad {
+    margin-top: 1rem;
+    width: max-content;
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 4rem 0 2rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .buttonLoad {
+    margin-top: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .image {
+    width: 160px;
+    height: 160px;
+  }
+  .title {
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image {
+    width: 160px;
+    height: 160px;
+  }
+  .buttonLoad {
+    margin-top: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .image {
+    width: 190px;
+    height: 190px;
+  }
+  .buttonLoad {
+    margin-top: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .title {
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+  }
+}
