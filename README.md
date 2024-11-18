@@ -17,7 +17,11 @@ Welcome to my Next.js 14 project! This repository contains the source code for a
 
 This project is a web application developed using Next.js 14, a powerful React framework that enables server-side rendering and static site generation. The application showcases the latest features and capabilities of Next.js, providing a robust and efficient solution for modern web development.
 
+<<<<<<< HEAD
 The main website of this project can be viewed at [https://alistore.liara.run](https://alistore.liara.run).
+=======
+The main website of this project can be viewed at [https://sticker-next.liara.run](https://sticker-next.liara.run).
+>>>>>>> 22901985a550df5612cfb8045b7c6388b78e4e0c
 
 ## Features
 
@@ -42,7 +46,10 @@ Make sure you have the following installed on your machine:
 ### Installation
 
 1. Clone the repository:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22901985a550df5612cfb8045b7c6388b78e4e0c
    ```bash
    git clone https://github.com/ali-barnahad/Ali_Store.git
    ```
